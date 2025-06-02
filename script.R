@@ -1,6 +1,4 @@
 library(dplyr)
 data <- read.csv("~/Documents/dengue/dengue.csv")
-data14 <-  filter(data, year==2014)
-total_cases <- nrow(data14) 
-print(total_cases)
-
+data_2014 <- data[data$year == 2014, ]
+total_cases_2024 <- sum(data_2014$case_number, na.rm = TRUE)
